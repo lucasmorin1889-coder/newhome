@@ -1,4 +1,8 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Newhome — Гостевой дом на Сямозере | Карелия</title>
 <style>
 :root{--g:#0B1914;--s:#122019;--s2:#1B3026;--a:#C88A3A;--al:#E0AE65;--a10:rgba(200,138,58,.1);--tp:#F0EAE0;--ts:#8A9A88;--tm:#4E5E50;--b:rgba(200,138,58,.15);--b2:rgba(255,255,255,.07);--gap:clamp(72px,9vw,120px);--fw:min(1160px,100% - 48px);--fd:Georgia,'Times New Roman',serif;--fb:system-ui,-apple-system,sans-serif;--r:3px}
@@ -128,22 +132,6 @@ body.summer nav.on{background:rgba(8,20,16,.92)}
 .rev-name{font-size:13px;font-weight:700;color:var(--tp)}
 .rev-meta{font-size:11.5px;color:var(--tm);margin-top:2px}
 .rev-source{font-size:10.5px;color:var(--tm);margin-top:2px;display:flex;align-items:center;gap:4px}
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:48px}
-@media(max-width:700px){.price-grid{grid-template-columns:1fr}}
-.price-card{background:var(--s);padding:36px 30px;border-radius:var(--r);position:relative}
-.price-card.featured{background:var(--s2);border:1.5px solid var(--a)}
-.price-badge{position:absolute;top:-1px;right:24px;background:var(--a);color:#fff;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:0 0 6px 6px}
-.price-type{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--a);margin-bottom:10px}
-.price-name{font-family:var(--fd);font-size:clamp(18px,2vw,24px);font-weight:400;color:var(--tp);margin-bottom:6px}
-.price-amount{font-family:var(--fd);font-size:clamp(32px,4vw,48px);color:var(--tp);line-height:1;margin-block:16px 4px;font-variant-numeric:tabular-nums}
-.price-amount span{font-size:.45em;color:var(--ts);font-family:var(--fb);vertical-align:middle}
-.price-per{font-size:12.5px;color:var(--tm);margin-bottom:20px}
-.price-includes{display:flex;flex-direction:column;gap:9px;margin-top:20px;padding-top:20px;border-top:1px solid var(--b)}
-.price-row{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ts)}
-.price-row::before{content:'✓';color:var(--a);font-weight:800;font-size:11px;flex-shrink:0}
-.price-extra{margin-top:14px;padding-top:14px;border-top:1px solid var(--b)}
-.price-extra-title{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:8px}
-.price-extra-row{font-size:12.5px;color:var(--ts);padding:3px 0}
 .faqs{display:flex;flex-direction:column;gap:0;margin-top:48px;border-top:1px solid var(--b)}
 details{border-bottom:1px solid var(--b)}
 summary{list-style:none;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:15px;font-weight:600;color:var(--tp);transition:color .2s;user-select:none}
@@ -168,12 +156,6 @@ details[open] summary .faq-ico{background:var(--a);border-color:var(--a);color:#
 .contact-i{font-size:20px;flex-shrink:0}
 .contact-sub{font-size:10px;color:var(--tm);letter-spacing:.09em;text-transform:uppercase;display:block;margin-bottom:3px}
 .contact-val{font-weight:700;font-size:14.5px}
-.widget-box{background:var(--s2);border:1.5px solid var(--a);border-radius:8px;padding:0;min-height:360px;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;text-align:center;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.12)}
-.widget-note{font-size:12.5px;color:var(--ts);line-height:1.7;max-width:260px;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;flex:1}
-.widget-placeholder{padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;flex:1}
-.widget-placeholder div:first-child{font-size:48px}
-.widget-placeholder div:nth-child(2){font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--a);margin-top:8px}
-.widget-placeholder div:nth-child(3){font-size:12.5px;color:var(--ts);line-height:1.65;margin-top:6px}
 .dist-table{width:100%;border-collapse:collapse;margin-top:28px}
 .dist-table tr{border-bottom:1px solid var(--b)}
 .dist-table tr:first-child{border-top:1px solid var(--b)}
@@ -213,7 +195,8 @@ footer{background:var(--s);border-top:1px solid var(--b);padding:52px 0 36px}
 .treeline svg{display:block;width:100%;height:100%}
 @media(max-width:600px){.treeline{height:80px}}
 </style>
-
+</head>
+<body>
 <nav id="nav">
   <a class="logo" href="#"><b>NEW</b>HOME</a>
   <div class="nav-r">
@@ -274,13 +257,13 @@ footer{background:var(--s);border-top:1px solid var(--b);padding:52px 0 36px}
 </div>
 
 <div class="pgrid">
-  <div class="pcell pc-main"><img src="images/exterior-winter-1.jpg" alt="Дом зимой" loading="lazy" decoding="async" style="display:none"></div>
-  <div class="pcell pc-tr"><img src="images/fire-pit-1.jpg" alt="Костёр" loading="lazy" decoding="async" style="display:none"></div>
-  <div class="pcell pc-br"><img src="images/chairs-fire.jpg" alt="Кресла у костра" loading="lazy" decoding="async" style="display:none"></div>
+  <div class="pcell pc-main"><img src="images/exterior-winter-1.jpg" alt="Дом зимой" loading="lazy" decoding="async"></div>
+  <div class="pcell pc-tr"><img src="images/fire-pit-1.jpg" alt="Костёр" loading="lazy" decoding="async"></div>
+  <div class="pcell pc-br"><img src="images/chairs-fire.jpg" alt="Кресла у костра" loading="lazy" decoding="async"></div>
 </div>
 <div class="pgrid2">
-  <div class="pcell pc-bl"><img src="images/exterior-winter-2.jpg" alt="Беседка с огоньками" loading="lazy" decoding="async" style="display:none"></div>
-  <div class="pcell pc-br2"><img src="images/forest-snow.jpg" alt="Лес в снегу" loading="lazy" decoding="async" style="display:none"></div>
+  <div class="pcell pc-bl"><img src="images/exterior-winter-2.jpg" alt="Беседка с огоньками" loading="lazy" decoding="async"></div>
+  <div class="pcell pc-br2"><img src="images/forest-snow.jpg" alt="Лес в снегу" loading="lazy" decoding="async"></div>
 </div>
 
 <section class="section">
@@ -318,14 +301,14 @@ footer{background:var(--s);border-top:1px solid var(--b);padding:52px 0 36px}
   <div class="wrap" style="padding-block:var(--gap)">
     <div class="two rv">
       <div class="img-frame ratio-45">
-        <img src="images/interior-living.jpg" alt="Гостиная">
+        <img src="images/exterior-winter-2.jpg" alt="Гостиная" loading="lazy" decoding="async">
       </div>
       <div class="txt">
         <div class="eyebrow" style="margin-bottom:14px">О доме</div>
         <h2 class="h2" style="margin-bottom:22px">Бревенчатый дом<br>со всеми удобствами</h2>
         <p>Два просторных стола принимают <strong>16 гостей</strong> одновременно — не «разместитесь как-нибудь», а полноценный праздник с нормальными стульями и приборами для каждого.</p>
         <p>В доме <strong>14 полноценных спальных мест</strong> плюс запасной матрас. Каждый гость спит по-человечески. Полотенца, гигиена, чай и кофе — в комплекте.</p>
-        <p>Терраса с видом на лес, беседка <strong>32 м²</strong> с гирляндами, мангал, казан на 16 литров, решетки для барбекю. На территории — <strong>детская площадка</strong> и просторная парковка для любого автомобиля.</p>
+        <p>Терраса с видом на лес, беседка <strong>32 м²</strong> с гирляндами, мангал, казан на 16 литров, решетки для барбекью. На территории — <strong>детская площадка</strong> и просторная парковка для любого автомобиля.</p>
         <p style="margin-top:18px"><strong>Круглогодичный подъезд</strong> в любую погоду — новая трасса от Петрозаводска идёт прямо мимо.</p>
         <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
           <a class="btn" href="https://booking-online.agast.ru/?hms_system_id=18560">Забронировать</a>
@@ -571,7 +554,6 @@ footer{background:var(--s);border-top:1px solid var(--b);padding:52px 0 36px}
   </div>
 </section>
 
-
 <section class="section" style="padding-top:0;background:var(--s)" id="booking">
   <div class="wrap" style="padding-block:var(--gap)">
     <div class="book-grid">
@@ -732,7 +714,7 @@ footer{background:var(--s);border-top:1px solid var(--b);padding:52px 0 36px}
       <div>
         <div class="foot-ch">Навигация</div>
         <div class="flinks">
-          <a href="https://booking-online.agast.ru/?hms_system_id=18560">Забронировать</a>
+          <a href="#booking">Забронировать</a>
           <a href="#amenities">Удобства</a>
           <a href="#activities">Активности</a>
           <a href="#location">Как добраться</a>
@@ -786,3 +768,5 @@ requestIdleCallback(()=>{
   let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{resize();make();},150);});
 },(requestIdleCallback)?{timeout:3000}:null);
 </script>
+</body>
+</html>
