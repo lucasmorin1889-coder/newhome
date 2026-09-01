@@ -78,6 +78,28 @@ body.summer nav.on{background:rgba(8,20,16,.92)}
 .pc-bl{background:linear-gradient(145deg,#0D1510,#182022,#0A0E10)}
 .pc-br2{background:linear-gradient(135deg,#1A120A,#2A1F15,#3D2817)}
 @media(max-width:700px){.pgrid{grid-template-columns:1fr 1fr;grid-template-rows:220px 180px}.pc-main{grid-row:1;grid-column:1/3}.pgrid2{grid-template-rows:170px}}
+@media(max-width:480px){
+  :root{--gap:clamp(48px,8vw,72px)}
+  .wrap{padding-inline:16px}
+  .btn,.btn-wa,.btn-ghost{padding:12px 20px;font-size:13px}
+  .btn-lg{padding:14px 28px}
+  .d1{font-size:clamp(28px,5.5vw,42px);letter-spacing:-.02em}
+  .h2{font-size:clamp(20px,2.8vw,32px)}
+  .h3{font-size:clamp(14px,1.6vw,18px)}
+  .two{gap:clamp(24px,4vw,36px)!important}
+  .hero-btns{flex-direction:column}
+  .hero-btns>*{width:100%}
+  .hero-trust{flex-direction:column;gap:16px}
+  .htrust-item{font-size:11px}
+  .whom-grid{grid-template-columns:1fr}
+  .stat{padding:10px 16px;border:none;border-bottom:1px solid var(--b)}
+  .stat:last-child{border:none}
+  .rev-card{padding:20px}
+  .pgrid{grid-template-columns:1fr;grid-template-rows:auto;gap:3px}
+  .pc-main{grid-row:auto;grid-column:1}
+  .pcell{min-height:180px}
+  .img-frame.full{max-height:300px}
+}
 .whom-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:48px}
 @media(max-width:800px){.whom-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.whom-grid{grid-template-columns:1fr}}
