@@ -1,0 +1,788 @@
+<meta charset="utf-8">
+<title>Newhome — Гостевой дом на Сямозере | Карелия</title>
+<style>
+:root{--g:#0B1914;--s:#122019;--s2:#1B3026;--a:#C88A3A;--al:#E0AE65;--a10:rgba(200,138,58,.1);--tp:#F0EAE0;--ts:#8A9A88;--tm:#4E5E50;--b:rgba(200,138,58,.15);--b2:rgba(255,255,255,.07);--gap:clamp(72px,9vw,120px);--fw:min(1160px,100% - 48px);--fd:Georgia,'Times New Roman',serif;--fb:system-ui,-apple-system,sans-serif;--r:3px}
+body.summer{--g:#081410;--s:#0E2018;--s2:#153020;--a:#2B9E72;--al:#4DC49A;--a10:rgba(43,158,114,.1)}
+@media(prefers-color-scheme:light){:root{--g:#EDE8DC;--s:#E5E0D4;--s2:#DAD5C9;--tp:#14201A;--ts:#3E4E3A;--tm:#7A8A78;--b:rgba(0,0,0,.1);--b2:rgba(0,0,0,.05)}}
+:root[data-theme=dark]{--g:#0B1914;--s:#122019;--s2:#1B3026;--tp:#F0EAE0;--ts:#8A9A88;--tm:#4E5E50;--b:rgba(200,138,58,.15);--b2:rgba(255,255,255,.07)}
+:root[data-theme=light]{--g:#EDE8DC;--s:#E5E0D4;--s2:#DAD5C9;--tp:#14201A;--ts:#3E4E3A;--tm:#7A8A78;--b:rgba(0,0,0,.1);--b2:rgba(0,0,0,.05)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--g);color:var(--tp);font-family:var(--fb);-webkit-font-smoothing:antialiased;transition:background .6s,color .3s;position:relative}
+body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.045;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{display:block;max-width:100%}
+a{color:inherit}
+ul{list-style:none}
+.d1{font-family:var(--fd);font-size:clamp(38px,6.2vw,84px);font-weight:400;line-height:1.03;letter-spacing:-.025em;text-wrap:balance}
+.h2{font-family:var(--fd);font-size:clamp(24px,3.2vw,46px);font-weight:400;line-height:1.15;text-wrap:balance}
+.h3{font-family:var(--fd);font-size:clamp(16px,1.8vw,22px);font-weight:400;line-height:1.2}
+.eyebrow{font-size:10.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--a)}
+.body{font-size:clamp(14px,1.35vw,16px);line-height:1.8;color:var(--ts)}
+.small{font-size:12.5px;color:var(--tm);line-height:1.5}
+.wrap{width:var(--fw);margin-inline:auto}
+.section{padding-block:var(--gap)}
+.btn{background:var(--a);color:#fff;border:none;padding:13px 26px;border-radius:var(--r);font-size:13.5px;font-weight:700;letter-spacing:.04em;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:background .18s,transform .1s;white-space:nowrap}
+.btn:hover{background:var(--al)}
+.btn:active{transform:scale(.98)}
+.btn-lg{padding:16px 34px;font-size:14.5px}
+.btn-ghost{background:transparent;color:var(--tp);border:1.5px solid rgba(240,234,224,.28);padding:13px 26px;border-radius:var(--r);font-size:13.5px;font-weight:600;letter-spacing:.03em;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .2s;backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(240,234,224,.12);border-color:rgba(240,234,224,.45)}
+.btn-wa{background:#25D366;color:#fff;border:none;padding:13px 26px;border-radius:var(--r);font-size:13.5px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .18s}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+nav{position:fixed;inset:0 0 auto;z-index:100;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .35s}
+nav.on{background:rgba(11,25,20,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--b)}
+body.summer nav.on{background:rgba(8,20,16,.92)}
+.logo{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--tp)}
+.logo b{color:var(--a)}
+.nav-r{display:flex;align-items:center;gap:12px}
+.spill{display:flex;background:var(--s);border:1px solid var(--b);border-radius:99px;padding:4px 5px;gap:2px}
+.spill button{background:none;border:none;cursor:pointer;padding:5px 14px;border-radius:99px;font-size:11px;font-weight:800;letter-spacing:.07em;color:var(--ts);transition:all .3s}
+.spill button.on{background:var(--a);color:#fff}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;background:linear-gradient(135deg,#3D2817 0%,#5C3D28 25%,#2A1F17 50%,#3D2817 75%,#1A1410 100%);transition:opacity .8s}
+.hero-img::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 50% at 62% 36%,rgba(200,138,58,.08) 0%,transparent 60%),radial-gradient(ellipse 55% 75% at 10% 70%,rgba(26,58,38,.6) 0%,transparent 55%),linear-gradient(158deg,#0B1914 0%,#162E1E 38%,#0E2018 62%,#0B1914 100%);pointer-events:none}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,25,20,.12) 0%,rgba(11,25,20,.05) 35%,rgba(11,25,20,.78) 100%);z-index:1}
+.hero-body{position:relative;z-index:2;padding:56px 40px 72px}
+@media(max-width:600px){.hero-body{padding:44px 22px 52px}}
+.hero-loc{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.hero-loc::after{content:'';height:1px;width:32px;background:var(--a);opacity:.7}
+.hero-title{color:#F5F0E3;text-shadow:0 2px 48px rgba(0,0,0,.35);margin-bottom:20px;max-width:740px}
+.hero-title em{font-style:italic;color:var(--al)}
+.hero-sub{font-size:clamp(14px,1.55vw,17px);line-height:1.7;color:rgba(240,234,224,.72);max-width:500px;margin-bottom:32px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero-trust{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:36px;padding-top:28px;border-top:1px solid rgba(240,234,224,.14)}
+.htrust-item{font-size:12px;color:rgba(240,234,224,.55);display:flex;align-items:center;gap:7px}
+.htrust-item b{color:rgba(240,234,224,.85);font-weight:600}
+.band{background:var(--s);border-top:1px solid var(--b);border-bottom:1px solid var(--b);padding:36px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr)}
+@media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:12px 26px;border-right:1px solid var(--b)}
+.stat:last-child{border-right:none}
+@media(max-width:560px){.stat:nth-child(2){border-right:none}.stat:nth-child(3){border-right:1px solid var(--b)}}
+.stat-n{font-family:var(--fd);font-size:clamp(28px,4vw,52px);line-height:1;font-variant-numeric:tabular-nums}
+.stat-u{font-size:.46em;color:var(--a);font-family:var(--fb);font-weight:800;vertical-align:.18em}
+.stat-l{font-size:11px;color:var(--tm);letter-spacing:.05em;text-transform:uppercase;font-weight:600;margin-top:5px}
+.pgrid{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:300px 220px;gap:4px;margin-top:4px}
+.pgrid2{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:220px;gap:4px}
+.pcell{overflow:hidden;position:relative;background:var(--s)}
+.pcell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s;opacity:0.95}
+.pcell:hover img{transform:scale(1.04)}
+.pc-main{grid-row:1/3;background:linear-gradient(135deg,#1A120A 0%,#3D2817 50%,#2A1F15 100%)}
+.pc-tr{background:linear-gradient(145deg,#5C3D28,#8B5E3C,#4A3420)}
+.pc-br{background:linear-gradient(135deg,#2A1F15,#3D2817,#1A120A)}
+.pc-bl{background:linear-gradient(145deg,#0D1510,#182022,#0A0E10)}
+.pc-br2{background:linear-gradient(135deg,#1A120A,#2A1F15,#3D2817)}
+@media(max-width:700px){.pgrid{grid-template-columns:1fr 1fr;grid-template-rows:220px 180px}.pc-main{grid-row:1;grid-column:1/3}.pgrid2{grid-template-rows:170px}}
+.whom-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:48px}
+@media(max-width:800px){.whom-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.whom-grid{grid-template-columns:1fr}}
+.whom-card{background:var(--s);padding:36px 28px;position:relative;overflow:hidden;transition:background .25s;border-radius:var(--r)}
+.whom-card::after{content:'';position:absolute;inset:0 0 auto;height:2px;background:var(--a);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.whom-card:hover{background:var(--s2)}
+.whom-card:hover::after{transform:scaleX(1)}
+.whom-icon{font-size:28px;margin-bottom:16px;display:block}
+.whom-title{font-family:var(--fd);font-size:clamp(15px,1.6vw,19px);font-weight:400;margin-bottom:10px;color:var(--tp)}
+.whom-body{font-size:13px;line-height:1.7;color:var(--ts)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,88px);align-items:center}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+.txt p{font-size:clamp(14px,1.35vw,16px);line-height:1.82;color:var(--ts);margin-bottom:16px}
+.txt p:last-child{margin-bottom:0}
+.txt strong{color:var(--tp);font-weight:600}
+.img-frame{border-radius:var(--r);overflow:hidden;background:var(--s)}
+.img-frame.ratio-45{aspect-ratio:4/5}
+.img-frame.ratio-169{aspect-ratio:16/9}
+.img-frame img{width:100%;height:100%;object-fit:cover}
+.amen-cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:3px;margin-top:48px}
+.amen-cat{background:var(--s);padding:28px 28px 32px;border-radius:var(--r)}
+.amen-cat-title{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--a);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.amen-list{display:flex;flex-direction:column;gap:10px}
+.amen-row{display:flex;align-items:center;gap:11px;font-size:13.5px;color:var(--ts);line-height:1.35}
+.amen-row::before{content:'✓';color:var(--a);font-weight:800;font-size:12px;flex-shrink:0}
+.surr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:3px;margin-top:48px}
+.surr{background:var(--s);padding:26px 24px;display:flex;gap:16px;align-items:flex-start;border-radius:var(--r);transition:background .2s}
+.surr:hover{background:var(--s2)}
+.surr-icon{width:26px;height:26px;flex-shrink:0;color:var(--a)}
+.surr-icon svg{width:100%;height:100%}
+.surr-dist{font-family:var(--fd);font-size:20px;color:var(--a);line-height:1;font-variant-numeric:tabular-nums}
+.surr-name{font-size:13px;font-weight:600;color:var(--tp);margin-top:3px}
+.surr-note{font-size:12px;color:var(--ts);margin-top:4px;line-height:1.45}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:48px}
+@media(max-width:860px){.acts{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.acts{grid-template-columns:1fr}}
+.act{background:var(--s);padding:38px 34px;position:relative;overflow:hidden;border-radius:var(--r)}
+.act-n{font-family:var(--fd);font-size:76px;line-height:.85;color:var(--s2);position:absolute;right:24px;bottom:18px;user-select:none;font-variant-numeric:tabular-nums;transition:color .3s}
+.act:hover .act-n{color:var(--g)}
+.act-title{margin-block:8px 11px;font-family:var(--fd);font-size:clamp(16px,1.7vw,21px);font-weight:400;color:var(--tp)}
+.act-body{font-size:13.5px;line-height:1.72;color:var(--ts);max-width:340px;position:relative;z-index:1}
+.act-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;position:relative;z-index:1}
+.tag{font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--a);background:var(--a10);padding:4px 10px;border-radius:99px}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:48px}
+@media(max-width:800px){.rev-grid{grid-template-columns:1fr}}
+.rev-card{background:var(--s);padding:32px 28px;border-radius:var(--r);display:flex;flex-direction:column;gap:0}
+.rev-stars{color:#F4C430;font-size:14px;letter-spacing:2px;margin-bottom:14px}
+.rev-text{font-size:14px;line-height:1.78;color:var(--ts);font-style:italic;flex:1;margin-bottom:20px}
+.rev-text b{color:var(--tp);font-style:normal;font-weight:600}
+.rev-author{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--b)}
+.rev-avatar{width:38px;height:38px;border-radius:50%;background:var(--s2);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.rev-name{font-size:13px;font-weight:700;color:var(--tp)}
+.rev-meta{font-size:11.5px;color:var(--tm);margin-top:2px}
+.rev-source{font-size:10.5px;color:var(--tm);margin-top:2px;display:flex;align-items:center;gap:4px}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:48px}
+@media(max-width:700px){.price-grid{grid-template-columns:1fr}}
+.price-card{background:var(--s);padding:36px 30px;border-radius:var(--r);position:relative}
+.price-card.featured{background:var(--s2);border:1.5px solid var(--a)}
+.price-badge{position:absolute;top:-1px;right:24px;background:var(--a);color:#fff;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:0 0 6px 6px}
+.price-type{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--a);margin-bottom:10px}
+.price-name{font-family:var(--fd);font-size:clamp(18px,2vw,24px);font-weight:400;color:var(--tp);margin-bottom:6px}
+.price-amount{font-family:var(--fd);font-size:clamp(32px,4vw,48px);color:var(--tp);line-height:1;margin-block:16px 4px;font-variant-numeric:tabular-nums}
+.price-amount span{font-size:.45em;color:var(--ts);font-family:var(--fb);vertical-align:middle}
+.price-per{font-size:12.5px;color:var(--tm);margin-bottom:20px}
+.price-includes{display:flex;flex-direction:column;gap:9px;margin-top:20px;padding-top:20px;border-top:1px solid var(--b)}
+.price-row{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ts)}
+.price-row::before{content:'✓';color:var(--a);font-weight:800;font-size:11px;flex-shrink:0}
+.price-extra{margin-top:14px;padding-top:14px;border-top:1px solid var(--b)}
+.price-extra-title{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:8px}
+.price-extra-row{font-size:12.5px;color:var(--ts);padding:3px 0}
+.faqs{display:flex;flex-direction:column;gap:0;margin-top:48px;border-top:1px solid var(--b)}
+details{border-bottom:1px solid var(--b)}
+summary{list-style:none;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:15px;font-weight:600;color:var(--tp);transition:color .2s;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--al)}
+.faq-ico{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--b);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;color:var(--a);font-size:16px;font-weight:300}
+details[open] summary .faq-ico{background:var(--a);border-color:var(--a);color:#fff;transform:rotate(45deg)}
+.faq-body{padding:0 0 22px;font-size:14px;line-height:1.8;color:var(--ts);max-width:640px}
+.faq-body a{color:var(--al);text-decoration:none}
+.faq-body a:hover{text-decoration:underline}
+.bigcta{background:var(--s);padding:clamp(56px,8vw,100px) 0;text-align:center}
+.bigcta-inner{max-width:640px;margin-inline:auto}
+.bigcta h2{margin-bottom:18px}
+.bigcta p{font-size:clamp(14px,1.4vw,17px);line-height:1.75;color:var(--ts);margin-bottom:36px}
+.bigcta-btns{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,88px);align-items:start}
+@media(max-width:700px){.book-grid{grid-template-columns:1fr}}
+.book-info > p{font-size:15px;line-height:1.8;color:var(--ts);margin-block:16px 28px}
+.contacts{display:flex;flex-direction:column;gap:10px}
+.contact{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--tp);padding:15px 18px;background:var(--g);border:1px solid var(--b);border-radius:var(--r);transition:all .2s}
+.contact:hover{border-color:var(--a);background:var(--s2)}
+.contact-i{font-size:20px;flex-shrink:0}
+.contact-sub{font-size:10px;color:var(--tm);letter-spacing:.09em;text-transform:uppercase;display:block;margin-bottom:3px}
+.contact-val{font-weight:700;font-size:14.5px}
+.widget-box{background:var(--s2);border:1.5px solid var(--a);border-radius:8px;padding:0;min-height:360px;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;text-align:center;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.widget-note{font-size:12.5px;color:var(--ts);line-height:1.7;max-width:260px;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;flex:1}
+.widget-placeholder{padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;flex:1}
+.widget-placeholder div:first-child{font-size:48px}
+.widget-placeholder div:nth-child(2){font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--a);margin-top:8px}
+.widget-placeholder div:nth-child(3){font-size:12.5px;color:var(--ts);line-height:1.65;margin-top:6px}
+.dist-table{width:100%;border-collapse:collapse;margin-top:28px}
+.dist-table tr{border-bottom:1px solid var(--b)}
+.dist-table tr:first-child{border-top:1px solid var(--b)}
+.dist-table td{padding:13px 0;font-size:13.5px}
+.dist-table td:first-child{color:var(--ts)}
+.dist-table td:last-child{text-align:right;font-family:var(--fd);font-size:19px;color:var(--a);font-variant-numeric:tabular-nums}
+.map{aspect-ratio:4/3;border-radius:var(--r);background:var(--s);border:1px solid var(--b);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;position:relative;overflow:hidden}
+.map::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--b) 1px,transparent 1px),linear-gradient(90deg,var(--b) 1px,transparent 1px);background-size:28px 28px;opacity:.55}
+.map-pin{font-size:30px;position:relative;z-index:1}
+.map-txt{position:relative;z-index:1;text-align:center;font-size:13px;color:var(--ts);line-height:1.65;padding:0 24px}
+.map-txt strong{color:var(--tp);display:block;margin-bottom:4px}
+.map-txt a{color:var(--al);text-decoration:none;font-weight:700}
+footer{background:var(--s);border-top:1px solid var(--b);padding:52px 0 36px}
+.foot-g{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+@media(max-width:700px){.foot-g{grid-template-columns:1fr;gap:28px}}
+.foot-logo{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px}
+.foot-logo b{color:var(--a)}
+.foot-desc{font-size:12.5px;color:var(--tm);line-height:1.65;max-width:240px}
+.foot-ch{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--tm);margin-bottom:14px}
+.flinks{display:flex;flex-direction:column;gap:9px}
+.flinks a{color:var(--ts);text-decoration:none;font-size:13px;transition:color .2s}
+.flinks a:hover{color:var(--a)}
+.foot-bot{margin-top:40px;padding-top:20px;border-top:1px solid var(--b);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.foot-copy{font-size:11px;color:var(--tm)}
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:200;background:#25D366;color:#fff;border-radius:99px;padding:13px 20px;display:flex;align-items:center;gap:9px;font-size:13px;font-weight:800;text-decoration:none;box-shadow:0 4px 28px rgba(37,211,102,.4);transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(37,211,102,.5)}
+.wa-float svg{width:20px;height:20px;flex-shrink:0}
+@media(max-width:480px){.wa-float span{display:none}.wa-float{padding:14px;border-radius:50%}}
+.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:199;background:var(--g);border-top:1px solid var(--b);padding:12px 16px;gap:10px}
+@media(max-width:640px){.mob-bar{display:flex}}
+.mob-bar .btn,.mob-bar .btn-wa{flex:1;justify-content:center;padding:13px}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media(max-width:640px){body{padding-bottom:72px}}
+.treeline{height:120px;overflow:hidden;position:relative}
+.treeline svg{display:block;width:100%;height:100%}
+@media(max-width:600px){.treeline{height:80px}}
+</style>
+
+<nav id="nav">
+  <a class="logo" href="#"><b>NEW</b>HOME</a>
+  <div class="nav-r">
+    <div class="spill" role="group" aria-label="Сезон">
+      <button class="on" id="bW" onclick="setSeason('w')">Зима</button>
+      <button id="bS" onclick="setSeason('s')">Лето</button>
+    </div>
+    <a class="btn" href="https://booking-online.agast.ru/?hms_system_id=18560" style="font-size:12.5px;padding:10px 18px">Забронировать</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-img"></div>
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-shade"></div>
+  <div class="hero-body">
+    <div class="hero-loc eyebrow">
+      <span>Карелия · Озеро Сямозеро · 60 км от Петрозаводска</span>
+    </div>
+    <h1 class="d1 hero-title">
+      Дом где нет<br>
+      соседей — только<br>
+      <em>ваша компания,<br>лес и озеро</em>
+    </h1>
+    <p class="hero-sub" id="hero-sub">
+      197 м² бревенчатого дома, банный чан без таймера,
+      5 минут пешком до лучшего пляжа Карелии.
+      Можно шуметь, петь у костра и не думать о времени.
+    </p>
+    <div class="hero-btns">
+      <a class="btn btn-lg" href="https://booking-online.agast.ru/?hms_system_id=18560">
+        Проверить даты
+        <svg width="15" height="15" fill="none" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn-ghost" href="https://wa.me/7XXXXXXXXXXX" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Написать в WhatsApp
+      </a>
+    </div>
+    <div class="hero-trust">
+      <div class="htrust-item">⭐ <b>5.0</b> рейтинг на Авито</div>
+      <div class="htrust-item">🚗 <b>Круглогодичный</b> подъезд</div>
+      <div class="htrust-item">🐾 <b>Питомцы</b> welcome</div>
+      <div class="htrust-item">🔥 <b>Мангал, казан, решетки</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="stat-n">197<span class="stat-u">м²</span></div><div class="stat-l">Площадь дома</div></div>
+      <div class="stat"><div class="stat-n">14</div><div class="stat-l">Спальных мест</div></div>
+      <div class="stat"><div class="stat-n">30<span class="stat-u">сот</span></div><div class="stat-l">Участок без соседей</div></div>
+      <div class="stat"><div class="stat-n">8<span class="stat-u">чел</span></div><div class="stat-l">Вмещает чан</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="pgrid">
+  <div class="pcell pc-main"><img src="images/exterior-winter-1.jpg" alt="Дом зимой" loading="lazy" decoding="async" style="display:none"></div>
+  <div class="pcell pc-tr"><img src="images/fire-pit-1.jpg" alt="Костёр" loading="lazy" decoding="async" style="display:none"></div>
+  <div class="pcell pc-br"><img src="images/chairs-fire.jpg" alt="Кресла у костра" loading="lazy" decoding="async" style="display:none"></div>
+</div>
+<div class="pgrid2">
+  <div class="pcell pc-bl"><img src="images/exterior-winter-2.jpg" alt="Беседка с огоньками" loading="lazy" decoding="async" style="display:none"></div>
+  <div class="pcell pc-br2"><img src="images/forest-snow.jpg" alt="Лес в снегу" loading="lazy" decoding="async" style="display:none"></div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow" style="margin-bottom:14px">Идеально для</div>
+      <h2 class="h2">Под любой повод<br>и любую компанию</h2>
+    </div>
+    <div class="whom-grid">
+      <div class="whom-card rv">
+        <span class="whom-icon">👨‍👩‍👧‍👦</span>
+        <div class="whom-title">Семья с детьми</div>
+        <p class="whom-body">Детская площадка, безопасная закрытая территория, 5 минут до пляжа. Места хватит на всех — 14 кроватей, два стола на 16 человек.</p>
+      </div>
+      <div class="whom-card rv">
+        <span class="whom-icon">🎉</span>
+        <div class="whom-title">День рождения / юбилей</div>
+        <p class="whom-body">Помогаем подобрать фотографа, рыбака-гида, выездного повара. Остальное — ваша компания, дом, огонь и озеро.</p>
+      </div>
+      <div class="whom-card rv">
+        <span class="whom-icon">🤝</span>
+        <div class="whom-title">Корпоратив</div>
+        <p class="whom-body">Приватная территория вдали от города. Никаких соседей — можно расслабиться. Связываем с гидами и поварами по запросу.</p>
+      </div>
+      <div class="whom-card rv">
+        <span class="whom-icon">🌿</span>
+        <div class="whom-title">Компания друзей</div>
+        <p class="whom-body">Костёр, чан, рыбалка на рассвете, баня до полуночи. Снегоходы зимой, лодки летом. Свобода без расписания.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;background:var(--s)">
+  <div class="wrap" style="padding-block:var(--gap)">
+    <div class="two rv">
+      <div class="img-frame ratio-45">
+        <img src="images/interior-living.jpg" alt="Гостиная">
+      </div>
+      <div class="txt">
+        <div class="eyebrow" style="margin-bottom:14px">О доме</div>
+        <h2 class="h2" style="margin-bottom:22px">Бревенчатый дом<br>со всеми удобствами</h2>
+        <p>Два просторных стола принимают <strong>16 гостей</strong> одновременно — не «разместитесь как-нибудь», а полноценный праздник с нормальными стульями и приборами для каждого.</p>
+        <p>В доме <strong>14 полноценных спальных мест</strong> плюс запасной матрас. Каждый гость спит по-человечески. Полотенца, гигиена, чай и кофе — в комплекте.</p>
+        <p>Терраса с видом на лес, беседка <strong>32 м²</strong> с гирляндами, мангал, казан на 16 литров, решетки для барбекю. На территории — <strong>детская площадка</strong> и просторная парковка для любого автомобиля.</p>
+        <p style="margin-top:18px"><strong>Круглогодичный подъезд</strong> в любую погоду — новая трасса от Петрозаводска идёт прямо мимо.</p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="https://booking-online.agast.ru/?hms_system_id=18560">Забронировать</a>
+          <a class="btn-ghost" href="https://wa.me/7XXXXXXXXXXX" target="_blank" rel="noopener" style="background:rgba(240,234,224,.06)">Задать вопрос</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow" style="margin-bottom:14px">Всё включено в стоимость</div>
+      <h2 class="h2">Удобства и оснащение</h2>
+    </div>
+    <div class="amen-cats">
+      <div class="amen-cat rv">
+        <div class="amen-cat-title">♨️ Баня и отдых</div>
+        <div class="amen-list">
+          <div class="amen-row">Сибирский чан на 8 человек — без таймера</div>
+          <div class="amen-row">Финская сауна</div>
+          <div class="amen-row">2 душевые с тропическим душем</div>
+          <div class="amen-row">2 санузла</div>
+        </div>
+      </div>
+      <div class="amen-cat rv">
+        <div class="amen-cat-title">🍳 Кухня и застолье</div>
+        <div class="amen-list">
+          <div class="amen-row">Полностью оборудованная кухня</div>
+          <div class="amen-row">2 стола — 16 гостей одновременно</div>
+          <div class="amen-row">Казан на 16 литров</div>
+          <div class="amen-row">Мангал, решетки, шампуры</div>
+          <div class="amen-row">Чай и кофе в комплекте</div>
+        </div>
+      </div>
+      <div class="amen-cat rv">
+        <div class="amen-cat-title">🎮 Развлечения</div>
+        <div class="amen-list">
+          <div class="amen-row">Скоростной Wi-Fi</div>
+          <div class="amen-row">ТВ — Иви и Кинопоиск</div>
+          <div class="amen-row">Настольный футбол</div>
+          <div class="amen-row">Шахматы, нарды, Codenames, Alias и др.</div>
+        </div>
+      </div>
+      <div class="amen-cat rv">
+        <div class="amen-cat-title">🏡 Территория</div>
+        <div class="amen-list">
+          <div class="amen-row">Беседка 32 м² с гирляндами</div>
+          <div class="amen-row">Терраса с видом на лес</div>
+          <div class="amen-row">Детская площадка</div>
+          <div class="amen-row">Просторная парковка</div>
+          <div class="amen-row">Спуск для катеров и гидроциклов</div>
+        </div>
+      </div>
+      <div class="amen-cat rv">
+        <div class="amen-cat-title">🛎 Сервис</div>
+        <div class="amen-list">
+          <div class="amen-row">Полотенца и средства гигиены</div>
+          <div class="amen-row">Питомцы — welcome</div>
+          <div class="amen-row">Заезд с 15:00, выезд до 11:00</div>
+          <div class="amen-row">Круглогодичный подъезд</div>
+          <div class="amen-row">Трансфер от вокзала / аэропорта — по запросу</div>
+        </div>
+      </div>
+      <div class="amen-cat rv" style="border:1.5px solid var(--a)">
+        <div class="amen-cat-title">🎯 Помощь с организацией</div>
+        <div class="amen-list">
+          <div class="amen-row">Рекомендуем фотографов</div>
+          <div class="amen-row">Связываем с рыбаками-гидами</div>
+          <div class="amen-row">Подбираем выездных поваров</div>
+          <div class="amen-row">Помогаем с логистикой и трансфером</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;background:var(--s)">
+  <div class="wrap" style="padding-block:var(--gap)">
+    <div class="rv">
+      <div class="eyebrow" style="margin-bottom:14px">Что рядом</div>
+      <h2 class="h2">Всё необходимое<br>в радиусе 15 минут</h2>
+    </div>
+    <div class="surr-grid">
+      <div class="surr rv">
+        <div class="surr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/><circle cx="17" cy="6" r="3.2"/><path d="M17 9.2V13M13 13h8"/></svg></div>
+        <div>
+          <div class="surr-dist">5 мин</div>
+          <div class="surr-name">Пляж Сямозера</div>
+          <div class="surr-note">Лучший пляж Карелии — пешком</div>
+        </div>
+      </div>
+      <div class="surr rv">
+        <div class="surr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v7a2 2 0 002 2v11M7 2v7M9 2v9M17 2c-1.5 1.5-1.5 6 0 8v11"/></svg></div>
+        <div>
+          <div class="surr-dist">3 мин</div>
+          <div class="surr-name">Ресторан</div>
+          <div class="surr-note">Шикарный ресторан — на машине</div>
+        </div>
+      </div>
+      <div class="surr rv">
+        <div class="surr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.5 12a1.5 1.5 0 01-1.5 1.3H7A1.5 1.5 0 015.5 20L4 8z"/><path d="M8 8a4 4 0 018 0"/></svg></div>
+        <div>
+          <div class="surr-dist">5 мин</div>
+          <div class="surr-name">Магазин «Магнит»</div>
+          <div class="surr-note">И кофе, и всё необходимое</div>
+        </div>
+      </div>
+      <div class="surr rv">
+        <div class="surr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l2 3v13a2 2 0 01-2 2H8a2 2 0 01-2-2V6l2-3z"/><path d="M6 8h10M10 12v6"/></svg></div>
+        <div>
+          <div class="surr-dist">10 км</div>
+          <div class="surr-name">Фермерское хозяйство</div>
+          <div class="surr-note">Свежее молоко, масло, яйца, мясо</div>
+        </div>
+      </div>
+      <div class="surr rv">
+        <div class="surr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="17" r="1.4"/><circle cx="12.5" cy="18.5" r="1.4"/><circle cx="17.5" cy="16.5" r="1.4"/><path d="M7 15.6c0-3 2-6 3.5-8M12.5 17c.5-3.5 2-7 4-9.5M17.5 15c.5-2.5 1.5-5 3-7"/></svg></div>
+        <div>
+          <div class="surr-dist">15 мин</div>
+          <div class="surr-name">Зоокомплекс «Три медведя»</div>
+          <div class="surr-note">Дети в восторге, взрослые тоже</div>
+        </div>
+      </div>
+      <div class="surr rv">
+        <div class="surr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l4-3 4 3v11M12 21V7l4-4 4 4v14"/><path d="M4 21h16M8 14h0M16 12h0"/></svg></div>
+        <div>
+          <div class="surr-dist">60 км</div>
+          <div class="surr-name">Петрозаводск</div>
+          <div class="surr-note">Новая трасса — аэропорт по пути</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow" style="margin-bottom:14px">Активности</div>
+      <h2 class="h2">Мы помогаем<br>с организацией</h2>
+    </div>
+    <div class="acts">
+      <div class="act rv">
+        <div class="eyebrow">Вода и природа</div>
+        <div class="act-title">Рыбалка на Сямозере</div>
+        <p class="act-body">Щука и окунь берут на рассвете. Летом — с лодки на закате, зимой — из лунки. Рыбака-гида можем найти.</p>
+        <div class="act-tags"><span class="tag">Лето</span><span class="tag">Зима</span></div>
+        <div class="act-n">01</div>
+      </div>
+      <div class="act rv">
+        <div class="eyebrow">Тихая охота</div>
+        <div class="act-title">Грибы и ягоды</div>
+        <p class="act-body">В 10 минутах — карельский лес: белые, подосиновики, черника, брусника. Вечером — на сковородку. Знаем хорошие места.</p>
+        <div class="act-tags"><span class="tag">Июль–сентябрь</span></div>
+        <div class="act-n">02</div>
+      </div>
+      <div class="act rv">
+        <div class="eyebrow">Экстрим</div>
+        <div class="act-title">Снегоходы и квадроциклы</div>
+        <p class="act-body">Туры по зимним лесам или летние маршруты. Можем подобрать прокат с инструктором.</p>
+        <div class="act-tags"><span class="tag">Зима</span><span class="tag">Лето</span></div>
+        <div class="act-n">03</div>
+      </div>
+      <div class="act rv">
+        <div class="eyebrow">Водные прогулки</div>
+        <div class="act-title">Лодки, катера, гидроциклы</div>
+        <p class="act-body">Удобный спуск прямо на участке. Есть рекомендации по аренде и гидам.</p>
+        <div class="act-tags"><span class="tag">Лето</span></div>
+        <div class="act-n">04</div>
+      </div>
+      <div class="act rv">
+        <div class="eyebrow">Мероприятие</div>
+        <div class="act-title">Праздник, корпоратив, свидание</div>
+        <p class="act-body">Рекомендуем фотографов, поваров, помогаем с логистикой. Или просто берите дом и делайте свое.</p>
+        <div class="act-tags"><span class="tag">Весь год</span></div>
+        <div class="act-n">05</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="treeline" aria-hidden="true">
+  <svg viewBox="0 0 400 90" preserveAspectRatio="xMidYMax slice">
+    <defs>
+      <pattern id="pines" width="70" height="90" patternUnits="userSpaceOnUse">
+        <path d="M35 4 L50 38 L43 38 L56 64 L47 64 L60 90 L10 90 L23 64 L14 64 L27 38 L20 38 Z" fill="var(--s2)"/>
+      </pattern>
+      <pattern id="pinesFront" width="90" height="90" patternUnits="userSpaceOnUse" patternTransform="translate(30,10)">
+        <path d="M45 14 L62 46 L54 46 L68 72 L57 72 L72 96 L18 96 L33 72 L22 72 L36 46 L28 46 Z" fill="var(--s)"/>
+      </pattern>
+    </defs>
+    <rect width="400" height="90" fill="url(#pines)"/>
+    <rect width="400" height="90" fill="url(#pinesFront)"/>
+  </svg>
+</div>
+
+<section class="section" style="padding-top:0;background:var(--s)">
+  <div class="wrap" style="padding-block:var(--gap)">
+    <div class="rv">
+      <div class="eyebrow" style="margin-bottom:14px">Отзывы гостей</div>
+      <h2 class="h2">Что говорят те,<br>кто уже был здесь</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card rv">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">«Приезжали большой компанией 13 человек — места хватило всем с запасом. <b>Чан — это что-то невероятное.</b> Сидели в нём в -15 и смотрели на звёзды. Костёр горел до трёх ночи — и никто не жаловался.»</p>
+        <div class="rev-author">
+          <div class="rev-avatar">👤</div>
+          <div>
+            <div class="rev-name">Александр В.</div>
+            <div class="rev-meta">Приехали зимой, компания 13 человек</div>
+            <div class="rev-source">★ Авито · Рекомендует</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card rv">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">«Снимали на день рождения мамы — 60 лет. <b>Всё было идеально: накрытый стол, тёплый дом, всё организовано.</b> Мама плакала от счастья.»</p>
+        <div class="rev-author">
+          <div class="rev-avatar">👤</div>
+          <div>
+            <div class="rev-name">Мария К.</div>
+            <div class="rev-meta">День рождения, 18 гостей</div>
+            <div class="rev-source">★ Суточно.ру · Рекомендует</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card rv">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">«Были корпоративом в декабре. <b>Пляж реально лучший.</b> Кухня удобная, всё есть. Wi-Fi работает стабильно. Дорога от Петрозаводска 50 минут по отличной трассе.»</p>
+        <div class="rev-author">
+          <div class="rev-avatar">👤</div>
+          <div>
+            <div class="rev-name">Иван и команда</div>
+            <div class="rev-meta">Корпоратив, 10 человек</div>
+            <div class="rev-source">★ ВКонтакте · Рекомендует</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="padding-top:0;background:var(--s)" id="booking">
+  <div class="wrap" style="padding-block:var(--gap)">
+    <div class="book-grid">
+      <div class="rv">
+        <div class="eyebrow" style="margin-bottom:14px">Бронирование</div>
+        <h2 class="h2" style="margin-bottom:16px">Проверьте<br>свободные даты</h2>
+        <div style="background:rgba(200,138,58,.15);border:1.5px solid var(--a);border-radius:6px;padding:16px 18px;margin-bottom:28px;display:flex;align-items:center;gap:12px">
+          <span style="font-size:20px;flex-shrink:0">🎁</span>
+          <div>
+            <div style="font-weight:700;font-size:14px;color:var(--tp);margin-bottom:3px">При прямой бронировании — скидка 6%</div>
+            <div style="font-size:12px;color:var(--ts)">Забронируйте через календарь или напишите в WhatsApp</div>
+          </div>
+        </div>
+        <div class="contacts">
+          <a class="contact" href="https://wa.me/7XXXXXXXXXXX" target="_blank" rel="noopener">
+            <span class="contact-i">💬</span>
+            <div>
+              <span class="contact-sub">WhatsApp — предпочтительно</span>
+              <span class="contact-val">+7 (XXX) XXX-XX-XX</span>
+            </div>
+          </a>
+          <a class="contact" href="tel:+7XXXXXXXXXXX">
+            <span class="contact-i">📞</span>
+            <div>
+              <span class="contact-sub">Позвонить</span>
+              <span class="contact-val">+7 (XXX) XXX-XX-XX</span>
+            </div>
+          </a>
+        </div>
+        <p class="small" style="margin-top:16px">Также принимаем через ВКонтакте, Авито и Суточно.ру</p>
+      </div>
+      <div class="rv">
+        <a href="https://booking-online.agast.ru/?hms_system_id=18560" target="_blank" rel="noopener" style="display:block;text-decoration:none">
+          <div style="background:var(--s2);border:1.5px solid var(--a);border-radius:8px;padding:48px 32px;min-height:360px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;cursor:pointer;transition:all .3s">
+            <div style="font-size:64px">📅</div>
+            <div style="font-family:var(--fd);font-size:28px;color:var(--tp);font-weight:400;text-align:center">Открыть календарь</div>
+            <div style="font-size:14px;color:var(--ts);text-align:center;max-width:360px;line-height:1.6">Выберите удобные даты и забронируйте дом прямо в Agast</div>
+            <div style="margin-top:12px;background:var(--a);color:#fff;padding:12px 24px;border-radius:6px;font-weight:700;font-size:14px">Перейти к бронированию</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow" style="margin-bottom:14px">Частые вопросы</div>
+      <h2 class="h2">Ответы на<br>главные вопросы</h2>
+    </div>
+    <div class="faqs rv">
+      <details open>
+        <summary>Можно ли приезжать зимой?<div class="faq-ico">+</div></summary>
+        <div class="faq-body">Да, дом работает круглый год. Подъезд круглогодичный для любого автомобиля. Зима в Карелии — особое удовольствие: чан в мороз, снегоходы, прогулки по заснеженному лесу.</div>
+      </details>
+      <details>
+        <summary>Где искать фотографа, рыбака или повара?<div class="faq-ico">+</div></summary>
+        <div class="faq-body">Знаем хороших специалистов в округе. <a href="https://wa.me/7XXXXXXXXXXX" target="_blank" rel="noopener">Напишите в WhatsApp</a> — подберём под вашу дату и бюджет. Это не комплексная организация мероприятия, но мы помогаем с рекомендациями.</div>
+      </details>
+      <details>
+        <summary>Разрешено ли приезжать с домашними животными?<div class="faq-ico">+</div></summary>
+        <div class="faq-body">Да, питомцев берём с радостью. Территория закрытая, просторная. Предупредите при бронировании о количестве и размере животных.</div>
+      </details>
+      <details>
+        <summary>Можно ли сделать поздний выезд?<div class="faq-ico">+</div></summary>
+        <div class="faq-body">Стандартный выезд до 11:00. Поздний выезд возможен по договорённости — уточняйте при бронировании, зависит от загруженности.</div>
+      </details>
+      <details>
+        <summary>Есть ли трансфер от вокзала или аэропорта?<div class="faq-ico">+</div></summary>
+        <div class="faq-body">Организуем трансфер от ж/д вокзала, автовокзала и аэропорта Петрозаводска. Уточняйте стоимость при бронировании.</div>
+      </details>
+      <details>
+        <summary>Как далеко до ближайшего магазина?<div class="faq-ico">+</div></summary>
+        <div class="faq-body">«Магнит» — 5 минут на машине. Там же кофе и всё необходимое. Фермерское хозяйство — 10 км: свежее молоко, масло, яйца, мясо.</div>
+      </details>
+      <details>
+        <summary>Есть ли Wi-Fi? Можно ли работать удалённо?<div class="faq-ico">+</div></summary>
+        <div class="faq-body">Да, скоростной Wi-Fi работает стабильно. Гости спокойно работают удалённо — особенно удобно для совмещения работы с отдыхом.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;background:var(--s)">
+  <div class="wrap" style="padding-block:var(--gap)">
+    <div class="two">
+      <div class="rv">
+        <div class="eyebrow" style="margin-bottom:14px">Как добраться</div>
+        <h2 class="h2" style="margin-bottom:6px">Алекка хвойная, 11</h2>
+        <p class="small" style="margin-bottom:0">Республика Карелия · Озеро Сямозеро</p>
+        <table class="dist-table">
+          <tr><td>Петрозаводск</td><td>60 км</td></tr>
+          <tr><td>Аэропорт Петрозаводска</td><td>~70 км</td></tr>
+          <tr><td>До пляжа пешком</td><td>5 мин</td></tr>
+          <tr><td>Ресторан (на машине)</td><td>3 мин</td></tr>
+          <tr><td>Магазин «Магнит»</td><td>5 мин</td></tr>
+          <tr><td>Зоокомплекс «Три медведя»</td><td>15 мин</td></tr>
+        </table>
+        <div style="margin-top:24px">
+          <a class="btn" href="https://yandex.ru/maps/?text=Сямозеро+Алекка+хвойная+11" target="_blank" rel="noopener">
+            Открыть в Яндекс.Картах
+            <svg width="14" height="14" fill="none" viewBox="0 0 16 16"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-4M10 2h4m0 0v4m0-4L7 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="map">
+          <div class="map-pin">📍</div>
+          <div class="map-txt">
+            <strong>Newhome · Карелия</strong>
+            Алекка хвойная, 11<br>
+            Озеро Сямозеро<br><br>
+            <a href="https://yandex.ru/maps/?text=Сямозеро+Алекка+хвойная+11" target="_blank" rel="noopener">
+              Открыть в Яндекс.Картах →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bigcta">
+  <div class="wrap">
+    <div class="bigcta-inner rv">
+      <div class="eyebrow" style="margin-bottom:14px">Готовы?</div>
+      <h2 class="h2" style="margin-bottom:18px">Ваш отдых начинается<br>с одного сообщения</h2>
+      <p>Популярные даты разбирают за 2–4 недели. Напишите прямо сейчас — ответим в течение часа и проверим нужные даты.</p>
+      <div class="bigcta-btns">
+        <a class="btn btn-wa" href="https://wa.me/7XXXXXXXXXXX" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Написать в WhatsApp
+        </a>
+        <a class="btn" href="https://booking-online.agast.ru/?hms_system_id=18560" style="background:var(--s2);border:1.5px solid var(--b)">Проверить даты онлайн</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-g">
+      <div>
+        <div class="foot-logo"><b>NEW</b>HOME</div>
+        <p class="foot-desc">Гостевой дом на берегу Сямозера. Карелия, лес, тишина — и всё для настоящего отдыха душой.</p>
+      </div>
+      <div>
+        <div class="foot-ch">Контакты</div>
+        <div class="flinks">
+          <a href="https://wa.me/7XXXXXXXXXXX">WhatsApp</a>
+          <a href="tel:+7XXXXXXXXXXX">Позвонить</a>
+          <a href="https://vk.com/" target="_blank" rel="noopener">ВКонтакте</a>
+          <a href="https://avito.ru" target="_blank" rel="noopener">Авито</a>
+          <a href="https://sutochno.ru" target="_blank" rel="noopener">Суточно.ру</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-ch">Навигация</div>
+        <div class="flinks">
+          <a href="https://booking-online.agast.ru/?hms_system_id=18560">Забронировать</a>
+          <a href="#amenities">Удобства</a>
+          <a href="#activities">Активности</a>
+          <a href="#location">Как добраться</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span class="foot-copy">© 2026 Newhome · Республика Карелия · Озеро Сямозеро</span>
+      <span class="foot-copy">Алекка хвойная, 11</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/7XXXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Написать в WhatsApp</span>
+</a>
+
+<div class="mob-bar">
+  <a class="btn" href="tel:+7XXXXXXXXXXX">📞 Позвонить</a>
+  <a class="btn-wa" href="https://wa.me/7XXXXXXXXXXX" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<script>
+function setSeason(s){
+  const body=document.body,bW=document.getElementById('bW'),bS=document.getElementById('bS'),sub=document.getElementById('hero-sub');
+  if(s==='s'){
+    body.classList.add('summer');bS.classList.add('on');bW.classList.remove('on');
+    sub.innerHTML='Белые ночи, изумрудный лес и зеркало Сямозера.<br>Рыбалка на рассвете, лодки, костёр у воды. Только ваша компания.';
+  } else {
+    body.classList.remove('summer');bW.classList.add('on');bS.classList.remove('on');
+    sub.innerHTML='197 м² бревенчатого дома, банный чан без таймера,<br>5 минут пешком до лучшего пляжа Карелии.<br>Можно шуметь, петь у костра и не думать о времени.';
+  }
+  try{localStorage.setItem('nh-s',s);}catch(e){}
+}
+requestIdleCallback(()=>{
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>55),{passive:true});
+  try{if(localStorage.getItem('nh-s')==='s')setSeason('s');}catch(e){}
+  document.querySelectorAll('.pcell img').forEach(img=>{img.style.display='block';});
+  const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('in');obs.unobserve(el.target);}}),{threshold:.07,rootMargin:'0px 0px -28px'});
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+  const canvas=document.getElementById('heroCanvas'),hero=document.querySelector('.hero');
+  if(!canvas||!hero||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const ctx=canvas.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2);
+  let particles=[],raf=null;
+  function resize(){canvas.width=hero.clientWidth*dpr;canvas.height=hero.clientHeight*dpr;canvas.style.width=hero.clientWidth+'px';canvas.style.height=hero.clientHeight+'px';ctx.setTransform(dpr,0,0,dpr,0,0);}
+  function make(){const w=hero.clientWidth,h=hero.clientHeight,summer=document.body.classList.contains('summer'),n=Math.max(24,Math.min(70,Math.floor(w/16)));particles=Array.from({length:n},()=>summer?{x:Math.random()*w,y:Math.random()*h,r:.8+Math.random()*1.6,vx:(Math.random()-.5)*.25,vy:-(.08+Math.random()*.18),a:.25+Math.random()*.45,tw:Math.random()*Math.PI*2,ts:.02+Math.random()*.03}:{x:Math.random()*w,y:Math.random()*h,r:1+Math.random()*2.1,vx:(Math.random()-.5)*.35,vy:.35+Math.random()*.7,a:.35+Math.random()*.5,drift:Math.random()*Math.PI*2,ds:.01+Math.random()*.015});}
+  function tick(){const w=hero.clientWidth,h=hero.clientHeight,summer=document.body.classList.contains('summer');ctx.clearRect(0,0,w,h);particles.forEach(p=>{if(summer){p.x+=p.vx;p.y+=p.vy;p.tw+=p.ts;if(p.y<-8)p.y=h+8;if(p.x<-8)p.x=w+8;if(p.x>w+8)p.x=-8;const al=p.a*(.45+.55*Math.sin(p.tw));ctx.fillStyle=`rgba(224,174,101,${al})`;}else{p.drift+=p.ds;p.x+=p.vx+Math.sin(p.drift)*.15;p.y+=p.vy;if(p.y>h+8){p.y=-8;p.x=Math.random()*w;}if(p.x<-8)p.x=w+8;if(p.x>w+8)p.x=-8;ctx.fillStyle=`rgba(240,234,224,${p.a})`;}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();});raf=requestAnimationFrame(tick);}
+  resize();make();tick();
+  let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{resize();make();},150);});
+},(requestIdleCallback)?{timeout:3000}:null);
+</script>
