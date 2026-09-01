@@ -29,8 +29,8 @@ ul{list-style:none}
 .btn:hover{background:var(--al)}
 .btn:active{transform:scale(.98)}
 .btn-lg{padding:16px 34px;font-size:14.5px}
-.btn-ghost{background:transparent;color:var(--tp);border:1.5px solid rgba(240,234,224,.28);padding:13px 26px;border-radius:var(--r);font-size:13.5px;font-weight:600;letter-spacing:.03em;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .2s;backdrop-filter:blur(6px)}
-.btn-ghost:hover{background:rgba(240,234,224,.12);border-color:rgba(240,234,224,.45)}
+.btn-ghost{background:rgba(240,234,224,.08);color:var(--tp);border:1.5px solid rgba(240,234,224,.35);padding:13px 26px;border-radius:var(--r);font-size:13.5px;font-weight:600;letter-spacing:.03em;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .2s;backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:rgba(240,234,224,.18);border-color:rgba(240,234,224,.6);box-shadow:0 4px 16px rgba(240,234,224,.15)}
 .btn-wa{background:#25D366;color:#fff;border:none;padding:13px 26px;border-radius:var(--r);font-size:13.5px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .18s}
 .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
 nav{position:fixed;inset:0 0 auto;z-index:100;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .35s}
@@ -44,7 +44,7 @@ body.summer nav.on{background:rgba(8,20,16,.92)}
 .spill button.on{background:var(--a);color:#fff}
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
 .hero-img{position:absolute;inset:0;background:linear-gradient(135deg,#3D2817 0%,#5C3D28 25%,#2A1F17 50%,#3D2817 75%,#1A1410 100%);transition:opacity .8s}
-.hero-img::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 50% at 62% 36%,rgba(200,138,58,.08) 0%,transparent 60%),radial-gradient(ellipse 55% 75% at 10% 70%,rgba(26,58,38,.6) 0%,transparent 55%),linear-gradient(158deg,#0B1914 0%,#162E1E 38%,#0E2018 62%,#0B1914 100%);pointer-events:none}
+.hero-img::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 55% at 65% 30%,rgba(200,138,58,.12) 0%,transparent 50%),radial-gradient(ellipse 60% 80% at 8% 75%,rgba(26,58,38,.7) 0%,transparent 50%),radial-gradient(ellipse 100% 100% at 50% 50%,rgba(139,94,60,.2) 0%,transparent 70%),linear-gradient(158deg,#0B1914 0%,#162E1E 35%,#0D1A11 65%,#0B1914 100%);pointer-events:none}
 #heroCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,25,20,.12) 0%,rgba(11,25,20,.05) 35%,rgba(11,25,20,.78) 100%);z-index:1}
 .hero-body{position:relative;z-index:2;padding:56px 40px 72px}
