@@ -67,8 +67,10 @@ body.summer nav.on{background:rgba(8,20,16,.92)}
 .stat-n{font-family:var(--fd);font-size:clamp(28px,4vw,52px);line-height:1;font-variant-numeric:tabular-nums}
 .stat-u{font-size:.46em;color:var(--a);font-family:var(--fb);font-weight:800;vertical-align:.18em}
 .stat-l{font-size:11px;color:var(--tm);letter-spacing:.05em;text-transform:uppercase;font-weight:600;margin-top:5px}
-.pgrid{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:300px 220px;gap:4px;margin-top:4px}
-.pgrid2{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:220px;gap:4px}
+.pgrid{display:flex;gap:4px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scroll-behavior:smooth}
+.pgrid .pcell{flex:0 0 360px;scroll-snap-align:start;height:280px}
+.pgrid2{display:flex;gap:4px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scroll-behavior:smooth}
+.pgrid2 .pcell{flex:0 0 360px;scroll-snap-align:start;height:260px}
 .pcell{overflow:hidden;position:relative;background:var(--s)}
 .pcell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s;opacity:0.95}
 .pcell:hover img{transform:scale(1.04)}
@@ -95,10 +97,8 @@ body.summer nav.on{background:rgba(8,20,16,.92)}
   .stat{padding:10px 16px;border:none;border-bottom:1px solid var(--b)}
   .stat:last-child{border:none}
   .rev-card{padding:20px}
-  .pgrid{display:flex;gap:3px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin-bottom:0}
-  .pgrid .pcell{flex:0 0 280px;scroll-snap-align:start;scroll-behavior:smooth;min-height:280px}
-  .pgrid2{display:none}
-  .pc-main{grid-row:auto;grid-column:auto}
+  .pgrid .pcell{flex:0 0 220px;height:220px}
+  .pgrid2 .pcell{flex:0 0 220px;height:180px}
   .img-frame.full{max-height:300px}
 }
 .whom-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:48px}
